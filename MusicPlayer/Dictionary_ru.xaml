@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="txt_Menu">Меню</v:String>
+    <v:String x:Key="txt_Language">Язык</v:String>
+    <v:String x:Key="txt_Rus">Русский</v:String>
+    <v:String x:Key="txt_Eng">Английский</v:String>
+    <v:String x:Key="txt_Ex">Закрыть</v:String>
+    <v:String x:Key="txt_Save">Сохранить</v:String>
+
+    <v:String x:Key="txt_M">Моча</v:String>
+    <v:String x:Key="txt_G">Говно</v:String>
+
+    <v:String x:Key="txt_Band">Группа:</v:String>
+    <v:String x:Key="txt_Song">Песня:</v:String>
+    <v:String x:Key="txt_Album">Альбом:</v:String>
+    <v:String x:Key="txt_Year">Год:</v:String>
+    <v:String x:Key="txt_Volume">Громкость:</v:String>
+    <v:String x:Key="txt_Number">Номер:</v:String>
+    <v:String x:Key="txt_Bitrate">Битрейт:</v:String>
+    <v:String x:Key="txt_Channels">Каналы:</v:String>
+
+    <v:String x:Key="txt_Eject">Открыть</v:String>
+    <v:String x:Key="txt_Del">Удалить</v:String>
+    <v:String x:Key="txt_Clear">Очистить</v:String>
+    <v:String x:Key="txt_Tags">Теги</v:String>
+</ResourceDictionary>
