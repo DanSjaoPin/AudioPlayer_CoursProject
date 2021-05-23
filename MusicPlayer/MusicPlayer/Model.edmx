@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище MusicPlayerModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DBFiles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Number" Type="int" />
+          <Property Name="Path" Type="varchar" MaxLength="100" />
+          <Property Name="PLId" Type="int" />
+        </EntityType>
+        <EntityType Name="DBPlayList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK__DBFiles__PLId__267ABA7A">
+          <End Role="DBPlayList" Type="Self.DBPlayList" Multiplicity="0..1" />
+          <End Role="DBFiles" Type="Self.DBFiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DBPlayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DBFiles">
+              <PropertyRef Name="PLId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище MusicPlayerModelContainer">
+          <EntitySet Name="DBFiles" EntityType="Self.DBFiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DBPlayList" EntityType="Self.DBPlayList" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__DBFiles__PLId__267ABA7A" Association="Self.FK__DBFiles__PLId__267ABA7A">
+            <End Role="DBPlayList" EntitySet="DBPlayList" />
+            <End Role="DBFiles" EntitySet="DBFiles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MusicPlayerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DBFiles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="Int32" />
+          <Property Name="Path" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PLId" Type="Int32" />
+          <NavigationProperty Name="DBPlayList" Relationship="Self.FK__DBFiles__PLId__267ABA7A" FromRole="DBFiles" ToRole="DBPlayList" />
+        </EntityType>
+        <EntityType Name="DBPlayList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DBFiles" Relationship="Self.FK__DBFiles__PLId__267ABA7A" FromRole="DBPlayList" ToRole="DBFiles" />
+        </EntityType>
+        <Association Name="FK__DBFiles__PLId__267ABA7A">
+          <End Role="DBPlayList" Type="Self.DBPlayList" Multiplicity="0..1" />
+          <End Role="DBFiles" Type="Self.DBFiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DBPlayList">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DBFiles">
+              <PropertyRef Name="PLId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MusicPlayerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DBFiles" EntityType="Self.DBFiles" />
+          <EntitySet Name="DBPlayList" EntityType="Self.DBPlayList" />
+          <AssociationSet Name="FK__DBFiles__PLId__267ABA7A" Association="Self.FK__DBFiles__PLId__267ABA7A">
+            <End Role="DBPlayList" EntitySet="DBPlayList" />
+            <End Role="DBFiles" EntitySet="DBFiles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище MusicPlayerModelContainer" CdmEntityContainer="MusicPlayerEntities">
+          <EntitySetMapping Name="DBFiles">
+            <EntityTypeMapping TypeName="MusicPlayerModel.DBFiles">
+              <MappingFragment StoreEntitySet="DBFiles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="PLId" ColumnName="PLId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DBPlayList">
+            <EntityTypeMapping TypeName="MusicPlayerModel.DBPlayList">
+              <MappingFragment StoreEntitySet="DBPlayList">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MusicPlayer.BassPlayer">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAEAgAAAAAAAAkAAACIEACA4AIAAAABKAA=</HashCode>
+      <FileName>Classes\BassPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPlayer.Clear">
+    <Position X="12" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Clear.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPlayer.GetArt">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\GetArt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPlayer.Song">
+    <Position X="12.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAIAEAAAAAAAAAgAgAAAECAAAAAAAAAACA=</HashCode>
+      <FileName>Classes\Song.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPlayer.Vars">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAABAAAAAAAAAABAAACAAAAAAAIAAAAAEIA=</HashCode>
+      <FileName>Classes\Vars.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPlayer.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgYAABAASAAYgMQAAAAgCAAARiAAAAggJIAAAgAAICA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="MusicPlayer.Tags" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAACAAARAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Tags.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.222" />
+  </Class>
+  <Class Name="MusicPlayer.MusicPlayerEntities">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPlayer.DBFiles">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAQAAAAAAAIAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPlayer.DBPlayList">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBPlayList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPlayer.About" Collapsed="true">
+    <Position X="3.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>About.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
